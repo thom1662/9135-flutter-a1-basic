@@ -1,0 +1,31 @@
+name: assign_1_flutter
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: ^3.5.4
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - images/girl-with-red-hat-boots.jpg
+    - images/girl-with-red-hat-bunny.jpg
+    - images/girl-with-red-hat-burger.jpg
+
+  fonts:
+    - family: Hind
+      fonts:
+        - asset: fonts/Hind-Regular.ttf
+        - asset: fonts/Hind-Bold.ttf
+        - asset: fonts/Hind-Medium.ttf
