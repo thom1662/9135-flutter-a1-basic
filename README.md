@@ -1,3 +1,3 @@
-# assign_1_flutter
+# basic flutter app
 
-A new Flutter project.
+Images, font and layout
