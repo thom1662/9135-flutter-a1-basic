@@ -11,7 +11,10 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "basic flutter app; A1",
-      theme: ThemeData(fontFamily: 'Hind'), //add color scheme here
+      theme: ThemeData(
+          fontFamily: 'Hind',
+          colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.pink)
+              .copyWith(secondary: Colors.black)),
       home: Scaffold(
           appBar: AppBar(
             title: Text('Images & Assets'),
@@ -28,8 +31,40 @@ class MainApp extends StatelessWidget {
                     child: HorizontalAssetScroll(),
                   ),
 
+                  SizedBox(height: 20), //spacer
+
                   //font variations, may need to use listview to create gap in between? or something else
+                  ListTile(
+                    tileColor: Colors.pink[50],
+                    title: Text(
+                      'Image credit:',
+                      style: TextStyle(
+                          fontSize: 24,
+                          // fontWeight: FontWeight.bold,
+                          color: Colors.pink),
+                    ),
+                    subtitle: Text('Girl with red hat on Unsplash'),
+                    leading: Icon(Icons.camera_alt_rounded,
+                        color: Colors.pink, size: 30),
+                  ),
+
+                  ListTile(
+                    tileColor: Colors.pink[50],
+                    title: Text(
+                      'Font: Hind bold',
+                      style: TextStyle(
+                          // fontStyle: FontStyle.normal,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.pink,
+                          fontSize: 20),
+                    ),
+                  ),
+
                   ListTile(),
+
+                  ListTile(),
+
+                  SizedBox(height: 20), //spacer
 
                   // network images
                   SizedBox(height: 400, child: HorizontalNetworkScroll()),
@@ -59,7 +94,6 @@ class HorizontalNetworkScroll extends StatelessWidget {
       itemCount: imageUrls.length,
       scrollDirection: Axis.horizontal,
       itemBuilder: (context, index) => Padding(
-        
         padding: const EdgeInsets.all(4.0),
         child: Image.network(
           imageUrls[index],
