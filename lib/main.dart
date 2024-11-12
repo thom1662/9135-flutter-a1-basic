@@ -31,7 +31,7 @@ class MainApp extends StatelessWidget {
                     child: HorizontalAssetScroll(),
                   ),
 
-                  SizedBox(height: 20), //spacer
+                  SizedBox(height: 16), //spacer
 
                   //font variations, may need to use listview to create gap in between? or something else
                   ListTile(
@@ -40,19 +40,30 @@ class MainApp extends StatelessWidget {
                       'Image credit:',
                       style: TextStyle(
                           fontSize: 24,
-                          // fontWeight: FontWeight.bold,
+                          fontWeight: FontWeight.normal,
                           color: Colors.pink),
                     ),
                     subtitle: Text('Girl with red hat on Unsplash'),
-                    leading: Icon(Icons.camera_alt_rounded,
-                        color: Colors.pink, size: 30),
+                    leading: CircleAvatar(
+                      backgroundColor: Colors.pink[400],
+                      child:
+                          Icon(Icons.camera_alt_outlined, color: Colors.white),
+                    ),
                   ),
+
+                  SizedBox(height: 8),
 
                   ListTile(
                     tileColor: Colors.pink[50],
+                    leading: CircleAvatar(
+                      backgroundColor: Colors.pink[400],
+                      child: Icon(Icons.sentiment_satisfied_alt_outlined,
+                          color: Colors.white),
+                    ),
                     title: Text(
-                      'Font: Hind bold',
+                      'Hind bold',
                       style: TextStyle(
+
                           // fontStyle: FontStyle.normal,
                           fontWeight: FontWeight.bold,
                           color: Colors.pink,
@@ -60,11 +71,44 @@ class MainApp extends StatelessWidget {
                     ),
                   ),
 
-                  ListTile(),
+                  SizedBox(height: 8),
 
-                  ListTile(),
+                  ListTile(
+                    tileColor: Colors.pink[50],
+                    leading: CircleAvatar(
+                      backgroundColor: Colors.pink[400],
+                      child: Icon(Icons.fastfood_outlined, color: Colors.white),
+                    ),
+                    title: Text(
+                      'Hind medium',
+                      style: TextStyle(
+                          fontWeight: FontWeight.w500,
+                          color: Colors.pink,
+                          fontSize: 20),
+                    ),
+                  ),
 
-                  SizedBox(height: 20), //spacer
+                  SizedBox(height: 8),
+
+                  ListTile(
+                    tileColor: Colors.pink[50],
+                    leading: Icon(Icons.font_download_outlined,
+                        color: Colors.pink[400]),
+                    trailing: Icon(
+                      Icons.font_download_rounded,
+                      color: Colors.pink[400],
+                    ),
+                    title: Text(
+                      'System font: Noto',
+                      style: TextStyle(
+                          fontFamily: 'Noto',
+                          fontWeight: FontWeight.normal,
+                          color: Colors.pink,
+                          fontSize: 20),
+                    ),
+                  ),
+
+                  SizedBox(height: 16), //spacer
 
                   // network images
                   SizedBox(height: 400, child: HorizontalNetworkScroll()),

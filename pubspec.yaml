@@ -29,3 +29,4 @@ flutter:
         - asset: fonts/Hind-Regular.ttf
         - asset: fonts/Hind-Bold.ttf
         - asset: fonts/Hind-Medium.ttf
+          weight: 500
